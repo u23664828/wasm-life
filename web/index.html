@@ -1,0 +1,33 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Tic-Tac-Toe — Rust + WebAssembly</title>
+  <style>
+    :root { font-family: system-ui, Arial, sans-serif; }
+    body { margin: 24px; }
+    #board {
+      width: 300px; height: 300px;
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px;
+      margin: 12px 0;
+    }
+    .cell {
+      display: grid; place-items: center;
+      font-size: 48px; font-weight: 700; cursor: pointer;
+      border: 1px solid #ccc; height: 100px; background: #fafafa;
+      user-select: none;
+    }
+    #controls { display: flex; gap: 10px; align-items: center; }
+    button { padding: 8px 12px; }
+  </style>
+</head>
+<body>
+  <h1>Tic-Tac-Toe — Rust 🦀 + WebAssembly</h1>
+  <div id="status">Loading…</div>
+  <div id="board"></div>
+  <div id="controls">
+    <button id="reset">Reset</button>
+  </div>
+  <script type="module" src="./main.js"></script>
+</body>
+</html>
